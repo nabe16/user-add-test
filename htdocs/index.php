@@ -7,41 +7,55 @@
 <title>Login</title>
 <style>
 body {
-    background-color: #f5f5f5;
+    background-color:#f5f5f5;
 }
-h1 {
+.login {
     text-align: center;
-    font-size: 200px;
-    color: #d3d3d3;
+    font-size: 150px;
+    color: #a9a9a9;
 }
-#user , #input{
-    font-size: 50px;
-    color: #d3d3d3;
+#userid {
+    font-size: 30px;
+    color: #a9a9a9;
 }
-
-#input {
-    margin: 50px 200px 50px 200px;
+#password {
+    font-size: 30px;
+    color: #a9a9a9;
 }
-
 </style>
-
 </head>
 
 <body>
-<h1>Login</h1>
-
-<div id="input">
-<form>
-<div class="form-group">
-    <label for="inputUserId" id="user">UserID</label>
-    <input type="userid" class="form-control" id="inputUserId" aria-describedby="userHelp" placeholder="Enter UserID">
+<div class="container">
+<div class="row justify-content-center">
+    <div class="col-md-6 my-5">
+        <h1 class="login">Login</h1>
+    </div>
 </div>
-<div class="form-group">
-    <label for="inputPassword">Password</label>
-    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
+<form>
+<div class="row justify-content-center">
+    <div class="col-sm-6 m-2">      
+            <div class="form-group">
+                <label for="userId" id="userid">UserID</label>
+                <input class="form-control" id="useId" placeholder="UserID">
+            </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-sm-6 m-2">
+            <div class="form-group">
+                <label for="password" id="password">Password</label>
+                <input class="form-control" placeholder="Password">
+            </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-sm-6 m-2">
+    <button type="submit" class="btn btn-warning">Submit</button>
+    </div>
 </div>
 </form>
-</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
