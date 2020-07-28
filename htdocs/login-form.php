@@ -5,7 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="description" content="説明文"/>
-
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <title>Login</title>
@@ -65,7 +64,7 @@ body {
 
 <div class="row justify-content-center">
     <div class="col-sm-6 mt-5" id="addUser">
-    <p>新規ユーザー登録は<a href="adduser.php" class="text-warning">こちら</a></p>
+    <p>新規ユーザー登録は<a href="add-user.php" class="text-warning">こちら</a></p>
     </div>
 </div>
 </div>

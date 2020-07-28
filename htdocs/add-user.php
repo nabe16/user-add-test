@@ -1,3 +1,8 @@
+<?php
+session_start();
+session_gc();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +47,7 @@ body {
         <h1 class="adduser">AddUser</h1>
     </div>
 </div>
-<form action="addcomplete.php" method="post">
+<form action="add-complete.php" method="post">
 <div class="row justify-content-center">
     <div class="col-sm-6 mt-2 mx-2">      
             <div class="form-group">

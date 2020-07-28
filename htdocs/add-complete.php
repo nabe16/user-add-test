@@ -30,6 +30,8 @@ body {
 
 <body>
 <?php
+session_start();
+session_gc();
 
 //POSTデータを変数に格納
 $userid = $_POST['userid'];

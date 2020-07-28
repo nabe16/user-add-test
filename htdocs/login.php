@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+session_gc();
 $userid = $_POST['userid'];
 
 $dsn = 'mysql:dbname=userlist;host=mysql';
@@ -14,7 +14,6 @@ $options = array(
 
 try {
     $pdo = new PDO($dsn, $user, $password, $options);
-
 } catch(PDOException $e){
     exit('データベースに接続出来ませんでした。'.$e->getMessage());
 }
@@ -26,16 +25,21 @@ $stmt->execute();
 $userInfo = $stmt->fetch();
 
 if(password_verify($_POST['password'], $userInfo['password'])){
-    $_SESSION['userid'] = $userlist['userid'];
-    $msg = 'SUCCESS！';
-    $link = '<p class="link"><a href="index.php" class="text-warning">ホーム画面</a>にすすむ</p>';
 
-    if($userInfo['admin'] === 1){
-        $link = '<p class="link"><a href="index-admin.php" class="text-warning">ホーム画面</a>にすすむ</p>';
+    $_SESSION['userid'] = $userInfo['userid'];
+    $_SESSION['admin'] = $userInfo['admin'];
+
+    $msg = 'SUCCESS！';
+    $link = '<p class="link"><a href="home.php" class="text-warning">ホーム画面</a>にすすむ</p>';
+    if($userInfo['admin'] === '1'){
+        $link = '<p class="link"><a href="home-admin.php" class="text-warning">ホーム画面</a>にすすむ</p>';
     }
+
 }else{
+
     $msg = 'Wrong Password or UserID!';
     $link = '<p class="link"><a href="login-form.php" class="text-warning">ログイン画面</a>に戻る</p>';
+
 }
 
 ?>
